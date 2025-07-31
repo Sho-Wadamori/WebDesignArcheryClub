@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-html {
-    font-family: "Public Sans";
-}
-
 * {
     box-sizing: border-box;
+    font-family: "Public Sans";
 }
 
 html, body {
@@ -46,7 +43,7 @@ html, body {
 }
 
 .hero-image {
-    background-image: url("./images/Placeholder_view_vector.png");
+    background-image: url("./images/Placeholder.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -67,13 +64,6 @@ html, body {
     width: 80%;
     margin-top: 40px;
     margin-right: 0;
-}
-
-.text-left {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 150px;
-    width: 80%;
     margin: 40px auto 0;
 }
 
@@ -88,8 +78,38 @@ html, body {
 }
 
 .seperator {
-    margin-top: 30px;
+    margin-top: 100px;
     margin-bottom: 30px;
     background-color: rgb(0 171 142);
-    height: 300px;
+    height: 350px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    width: 80%;
+    margin: 40px auto 0;
+}
+
+.calendar {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.text-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    margin: auto;
+    width: 80%;
+    margin-top: 40px;
+    margin-right: 0;
+    margin: 40px auto 0;
+}
+
+.text-right .text,
+.text-right .image {
+    padding-left: 20px;
+    padding-right: 20px;
 }
