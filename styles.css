@@ -9,6 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: 18px;
 }
 
 .topbar,
@@ -24,13 +25,13 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    margin-bottom: -22px;
+    margin-bottom: -24px;
 }
 
 .left-link {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 18px;
 }
 
 .BHSLogo {
@@ -48,7 +49,8 @@ html, body {
     background-position: center;
     background-size: cover;
     position: relative;
-    height: 719px;
+    aspect-ratio: 2.30 / 1;
+    width: 100%;
 }
 
 .breadcrumbs {
@@ -113,3 +115,14 @@ html, body {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.full-image {
+    background-image: url("./images/Placeholder.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    aspect-ratio: 2.37 / 1;
+    width: 100%;
+}
+
