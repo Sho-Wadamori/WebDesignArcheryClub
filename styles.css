@@ -10,6 +10,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 .topbar,
@@ -25,13 +26,14 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    margin-bottom: -24px;
+    margin-bottom: 0px;
 }
 
 .left-link {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    margin-left: 40px;
 }
 
 .BHSLogo {
@@ -44,13 +46,20 @@ html, body {
 }
 
 .hero-image {
-    background-image: url("./images/Placeholder.png");
+    background-image: url("images/Main.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     aspect-ratio: 2.30 / 1;
     width: 100%;
+}
+
+.hero-image img{
+    width: 30%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
 }
 
 .breadcrumbs {
@@ -69,6 +78,7 @@ html, body {
     margin-top: 40px;
     margin-right: 0;
     margin: 40px auto 0;
+    align-items: center;
 }
 
 .text-left .text,
@@ -82,20 +92,26 @@ html, body {
 }
 
 /* Seperator */
-.seperator {
+.seperator{
     margin-top: 100px;
     margin-bottom: 30px;
-    background-color: rgb(0 171 142);
-    height: 350px;
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    gap: 300px;
+    background-color: #004E42;
+    height: 390px;
     color: white;
+    position: relative;
 }
 
-.seperator .info {
-    padding-top: 50px;
-    margin-left: 200px;
+.seperator .grid{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 200px;
+    height: 100%;
+    z-index: 1;
+}
+
+.seperator .grid .info {
+    align-content: center;
+    margin-left: 275px;
 }
 
 .seperator a {
@@ -104,22 +120,40 @@ html, body {
 }
 
 .seperator a:hover {
-    color: rgb(0, 78, 66);
+    color: rgb(0 171 142);
 }
 
-.seperator .pdf-container {
+.seperator .grid .pdf-container {
     width: 100%;
     max-width: 480px;
     height: 250px;
     margin-top: 35px;
+    padding-top: 30px;
 }
 
-.seperator .pdf-container iframe {
+.seperator .grid .pdf-container iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
+.seperator .pattern {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 5%; 
+    height: 100%; 
+}
+
+.seperator .pattern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
 
 /* Two Column */
 .two-column {
@@ -128,19 +162,46 @@ html, body {
     gap: 150px;
     width: 80%;
     margin: 40px auto 0;
+    align-content: center;
+    text-align: center
+}
+
+.two-column img{
+    height: 15em;
 }
 
 
 /* Calendar */
 .calendar {
     margin-top: 60px;
+    margin-bottom: 60px;
     text-align: center;
     margin-bottom: 30px;
-    background-color: rgb(0 171 142);
-    height: 350px;
+    background-color: #004E42;
+    height: 600px;
     color: white;
+    align-content: center;
+    padding-bottom: 40px;
+    position: relative;
 }
 
+.calendar .pattern {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 5%; 
+    height: 100%; 
+}
+
+.calendar .pattern img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
 
 /* Right Side Text */
 .text-right {
@@ -148,7 +209,7 @@ html, body {
     grid-template-columns: 1fr 1fr;
     gap: 150px;
     margin: auto;
-    width: 80%;
+    width: 60%;
     margin-top: 40px;
     margin-right: 0;
     margin: 40px auto 0;
@@ -159,12 +220,13 @@ html, body {
 .text-right .image {
     padding-left: 20px;
     padding-right: 20px;
+    align-content: center;
 }
 
 
 /* Full Image */
 .full-image {
-    background-image: url("images/jeffrey-hamilton-ArLOiOoR5L0-unsplash-1.jpg");
+    background-image: url("images/Placeholder.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -235,3 +297,25 @@ html, body {
     margin-right: 15px;
 }
 
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; 
+    height: 50px; 
+    padding: 0;  
+    border: none;
+    cursor: pointer;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    background-color: transparent; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-button img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    border-radius: 5px; 
+}
